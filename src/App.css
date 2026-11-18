@@ -1,0 +1,182 @@
+:root {
+  --zielony: #1db954;
+  --zielony-ciemny: #158a3e;
+  --czarny: #181515;
+}
+
+body {
+  margin: 0;
+}
+
+.strona {
+  position: relative;
+  color: var(--czarny);
+  transition: background-color 0.3s;
+}
+
+.strona.ciemna {
+  color: #ffffff;
+}
+
+.naglowek {
+  background-color: var(--czarny);
+  padding: 24px 0;
+  border-bottom: 4px solid var(--zielony);
+}
+
+.tytul-portalu {
+  color: var(--zielony);
+  font-size: 40px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.powitanie {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.powitanie-tekst {
+  margin: 0;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.przycisk-zielony {
+  background-color: var(--zielony);
+  color: #000;
+  font-weight: 700;
+  border-radius: 50px;
+  padding: 8px 24px;
+}
+
+.przycisk-zielony:hover {
+  background-color: var(--zielony-ciemny);
+  color: #fff;
+}
+
+.cytat {
+  margin: 24px 0;
+  padding: 14px 18px;
+  border-left: 5px solid var(--zielony);
+  background-color: rgba(29, 185, 84, 0.15);
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Wyszukiwarka */
+.pole-szukaj {
+  max-width: 500px;
+  border: 2px solid var(--zielony);
+  border-radius: 50px;
+  padding: 10px 20px;
+}
+
+.pole-szukaj:focus {
+  border-color: var(--zielony-ciemny);
+  box-shadow: 0 0 0 0.2rem rgba(29, 185, 84, 0.3);
+}
+
+.karta {
+  background-color: #181818;
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 16px;
+  height: 100%;
+  transition: background-color 0.2s;
+}
+
+.karta:hover {
+  background-color: #282828;
+}
+
+.karta-zdjecie {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 14px;
+}
+
+.karta-brak-zdjecia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--zielony), var(--zielony-ciemny));
+  color: #000;
+  font-size: 4rem;
+}
+
+.karta-tytul {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.karta-artysta {
+  margin: 0;
+  color: #b3b3b3;
+  font-size: 15px;
+}
+
+.brak-wynikow {
+  margin-top: 24px;
+  font-size: 30px;
+}
+
+.plyta-tlo {
+  position: fixed;
+  top: 50%;
+  left: -620px;
+  width: 1520px;
+  margin-top: -360px;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.nuta-tlo {
+  position: fixed;
+  top: 40%;
+  width: 400px;
+  right: 70px;
+  height: 700px;
+  margin-top: -210px;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+.naglowek {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.przycisk-trybu {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 20;
+  background-color: var(--zielony);
+  color: #000;
+  font-weight: 700;
+  border-radius: 50px;
+  padding: 10px 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.przycisk-trybu:hover {
+  background-color: var(--zielony-ciemny);
+  color: #fff;
+}
